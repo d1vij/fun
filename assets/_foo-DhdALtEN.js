@@ -1,0 +1,1 @@
+import{n as e,t}from"./compiler-runtime-CPXasG3c.js";import{t as n}from"./index-DHYUACa1.js";var r=t(),i=e();function a(){let e=(0,r.c)(2),{foo:t}=n.useParams(),a;return e[0]===t?a=e[1]:(a=(0,i.jsxs)(`div`,{children:[`Hello `,t,`!`]}),e[0]=t,e[1]=a),a}export{a as component};
