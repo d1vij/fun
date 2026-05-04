@@ -1,0 +1,22 @@
+@reference "tailwindcss";
+
+@keyframes waddle {
+    from {
+        rotate: -10deg;
+    }
+
+    to {
+        rotate: 10deg;
+    }
+}
+
+.fwog {
+    @apply size-12 cursor-pointer;
+    @apply absolute bottom-0.5;
+    transition: translate 2s linear;
+
+    &.waddle {
+        animation: waddle 100ms alternate infinite linear;
+        translate: 100dvw;
+    }
+}
