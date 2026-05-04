@@ -1,1 +1,0 @@
-import{t as e}from"./index-CwxxpQIy.js";var t=e();function n(){return(0,t.jsx)(`div`,{children:`Hello "/foo"!`})}export{n as component};
