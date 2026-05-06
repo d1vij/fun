@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@source inline("animate-ping");
+
 .gloria-hallelujah-regular {
     font-family: "Gloria Hallelujah", cursive;
     font-weight: 400;

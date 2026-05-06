@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as appsProgressRouteImport } from './routes/(apps)/progress'
+import { Route as appsDaysSinceIncidentRouteImport } from './routes/(apps)/days-since-incident'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +23,39 @@ const appsProgressRoute = appsProgressRouteImport.update({
   path: '/progress',
   getParentRoute: () => rootRouteImport,
 } as any)
+const appsDaysSinceIncidentRoute = appsDaysSinceIncidentRouteImport.update({
+  id: '/(apps)/days-since-incident',
+  path: '/days-since-incident',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/days-since-incident': typeof appsDaysSinceIncidentRoute
   '/progress': typeof appsProgressRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/days-since-incident': typeof appsDaysSinceIncidentRoute
   '/progress': typeof appsProgressRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/(apps)/days-since-incident': typeof appsDaysSinceIncidentRoute
   '/(apps)/progress': typeof appsProgressRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/progress'
+  fullPaths: '/' | '/days-since-incident' | '/progress'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/progress'
-  id: '__root__' | '/' | '/(apps)/progress'
+  to: '/' | '/days-since-incident' | '/progress'
+  id: '__root__' | '/' | '/(apps)/days-since-incident' | '/(apps)/progress'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  appsDaysSinceIncidentRoute: typeof appsDaysSinceIncidentRoute
   appsProgressRoute: typeof appsProgressRoute
 }
 
@@ -65,11 +75,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof appsProgressRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/(apps)/days-since-incident': {
+      id: '/(apps)/days-since-incident'
+      path: '/days-since-incident'
+      fullPath: '/days-since-incident'
+      preLoaderRoute: typeof appsDaysSinceIncidentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  appsDaysSinceIncidentRoute: appsDaysSinceIncidentRoute,
   appsProgressRoute: appsProgressRoute,
 }
 export const routeTree = rootRouteImport

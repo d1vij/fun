@@ -3,7 +3,7 @@ import FooterButton from "./FooterButton";
 
 export default function HomeFooter() {
     return (
-        <div className="mt-12 flex w-full flex-wrap justify-center gap-4 p-20">
+        <div className="mt-12 flex flex-wrap justify-center gap-4 p-10">
             <FooterButton
                 href="https://github.com/d1vij"
                 icon={FaGithubSquare}

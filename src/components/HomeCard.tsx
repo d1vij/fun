@@ -11,7 +11,7 @@ export default function HomeCard({ imageUrl, alt, url }: Props) {
     return (
         <div
             className={cn(
-                "w-100 transition-all duration-150 hover:scale-102 active:scale-100",
+                "min-w-100 transition-all duration-150 hover:scale-102 active:scale-100",
                 "overflow-clip rounded-2xl shadow-black/10 hover:shadow-lg",
             )}
         >
