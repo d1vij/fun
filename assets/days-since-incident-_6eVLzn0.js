@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/DaysSinceIncident-B6fzg-Ez.js","assets/index-aZ4eK60M.js","assets/react--pSJJkYP.js","assets/index-BiHFPTmM.css","assets/vanilla-DpGtQuu4.js","assets/DaysSinceIncident-Ex3ZwCcw.css"])))=>i.map(i=>d[i]);
+import{o as e,t}from"./react--pSJJkYP.js";import{t as n}from"./index-aZ4eK60M.js";var r=(0,e(t()).lazy)(()=>n(()=>import(`./DaysSinceIncident-B6fzg-Ez.js`),__vite__mapDeps([0,1,2,3,4,5])));export{r as component};
