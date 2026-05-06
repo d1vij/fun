@@ -7,6 +7,10 @@ import { defineConfig } from "vite";
 
 const config = defineConfig({
     base: "/fun",
+    server:{
+        host: true,
+        allowedHosts: true
+    },
     resolve: { tsconfigPaths: true },
     plugins: [
         devtools(),

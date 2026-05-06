@@ -16,9 +16,9 @@ import HomeFooter from "@/components/HomeFooter";
 
 function Home() {
     return (
-        <div className="relative mx-auto flex min-h-dvh w-fit flex-col  max-w-dvw p-2">
-            <header className="mb-12 flex select-none flex-col items-center justify-center gap-2 font-logo mt-10">
-                <h1 className="flex items-end text-6xl">
+        <div className="relative mx-auto flex min-h-dvh w-fit flex-col  max-w-dvw p-4">
+            <header className="mb-12 flex select-none flex-col items-center justify-center gap-2 font-logo mt-10 p-1">
+                <h1 className="flex items-end md:text-6xl text-5xl">
                     DIVIJ
                     <Head />
                     <span className="ml-1">FUN</span>

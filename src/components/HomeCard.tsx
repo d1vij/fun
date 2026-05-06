@@ -11,12 +11,12 @@ export default function HomeCard({ imageUrl, alt, url }: Props) {
     return (
         <div
             className={cn(
-                "min-w-100 transition-all duration-150 hover:scale-102 active:scale-100",
-                "overflow-clip rounded-2xl shadow-black/10 hover:shadow-lg",
+                "md:w-100 w-full transition-all duration-150 hover:scale-102 active:scale-100",
+                "overflow-clip rounded-xl shadow-black/10 hover:shadow-lg bg-gray-200 md:min-h-37 min-h-30",
             )}
         >
             <Link to={url}>
-                <img src={imageUrl} alt={alt} />
+                <img src={imageUrl} alt={alt} className="" />
             </Link>
         </div>
     );

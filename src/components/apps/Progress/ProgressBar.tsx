@@ -1,6 +1,7 @@
 import { cn } from "@d1vij/shit-i-always-use";
 import type { StateSetterFunction } from "@d1vij/shit-i-always-use/react";
 import { motion } from "motion/react";
+import { round } from "radashi";
 import { useEffect, useRef, useState } from "react";
 
 /**
@@ -39,13 +40,13 @@ export default function ProgressBar(props: ProgressBarProps) {
 
     return (
         <div>
-            <div className="mb-2 flex w-full items-center justify-between font-semibold text-2xl">
+            <div className="mb-2 flex w-full items-center justify-between font-semibold text-xl md:text-2xl">
                 <h2 className="flex gap-4">
                     {props.emoji} {props.title}
                 </h2>
 
                 <span className="flex w-ull gap-2">
-                    <span>{Math.max(max - progress, 0)}</span>
+                    <span>{round(Math.max(max - progress, 0), 0)}</span>
                     <span>{props.remainingLabel}</span>
                 </span>
             </div>
